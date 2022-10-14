@@ -8,3 +8,8 @@
 
 - hmu in discord if you wanna solve together
 - Enjoy brainstroming solutions 😂
+
+## Attempted Challenges
+
+- Code Forces
+- CSES
