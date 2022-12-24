@@ -5,9 +5,9 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    int n, temp, a=0;
+    long long n, temp, a=0;
     cin >> n;
-    int store = n*(n+1)/2;
+    long long store = n*(n+1)/2;
     n--;
 
     while (n--)
