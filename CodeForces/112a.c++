@@ -1,7 +1,4 @@
 #include<iostream>
-#include <unistd.h>
-#include <string>
-#include<alloca.h>
 using namespace std;
 
 int main(){
