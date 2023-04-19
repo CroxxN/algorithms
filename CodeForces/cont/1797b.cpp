@@ -4,8 +4,8 @@ using namespace std;
 int main() {
   int t;
   cin >> t;
-  while(t--){
-    int n, q;
+  while (t--) {
+    int n, q, k = 0;
     cin >> n >> q;
     int mat[n][n];
     int oneeight[n][n];
@@ -15,20 +15,24 @@ int main() {
 
     for (int i = 0; i < n; i++)
       for (int j = 0; j < n; j++)
-        oneeight[n - i -1][n - j -1] = mat[i][j];
+        oneeight[n - i - 1][n - j - 1] = mat[i][j];
 
     for (int i = 0; i < n; i++)
       for (int j = 0; j < n; j++) {
 
-        if (q < 0) {
-          cout << "NO" << "\n";
-          goto jump;
-        }
         if (mat[i][j] != oneeight[i][j])
-          q--;
+          k++;
       }
-    cout << "YES" << "\n";
-    jump: continue;
+
+    if (k < q)
+      cout << "YES"
+           << "\n";
+    else if (n%2==0 && (k - q) %2==0)
+      cout << "NO"
+           << "\n";
+    else if (n%2!=0)
+      cout << "YES"
+           << "\n";
   }
   return 0;
 }

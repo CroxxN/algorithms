@@ -1,5 +1,8 @@
 **/*.test
-**/*.out
 **/test.*
 **/target
 /target
+*
+!/**/
+!*.*
+**/*.out
