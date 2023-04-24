@@ -15,28 +15,21 @@ int main() {
   int n;
   string s;
   cin >> n >> s;
-  int count = 1;
+  int count = 0;
   bitset<100> b(s);
   bitset<100> one(b.to_ulong() + 1);
-  one = b ^ one;
-
-  for (int i= __builtin_clz(b.to_ulong()); i< 100-n; i--){
-    one[i] = 0;
+  int c = 0;
+  while (b[c] == 0) {
+    c++;
+    if (c < 1) {
+      cout << 1;
+      return 0;
+    };
   }
-  cout << one << "\n";
-  int res = __builtin_popcount(one.to_ulong());
-  // int c = 0;
-  // while (b[c] == 0) {
-  //   c++; //lmao
-  //   if (c > n-1) {
-  //     cout << 1;
-  //     return 0;
-  //   };
-  // }
-  // for (int i = c; i < n; i++) {
-  //   count += b[i] | one[i];
-  // }
-  cout << res;
+  for (int i = c; i < n; i++) {
+    count += b[i] | one[i];
+  }
+  cout << count ;
   return 0;
 }
 
