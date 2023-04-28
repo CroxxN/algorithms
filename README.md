@@ -13,3 +13,6 @@
 
 - Code Forces
 - CSES
+- CodeChef
+- Leet Code
+- USACO
