@@ -13,8 +13,7 @@ fn main() {
     let new = make
         .charec
         .chars()
-        .map(|x| x.to_lowercase())
-        .partition
-        .collect::<char>();
+        .map(|x| x.to_lowercase().collect())
+        .collect();
     println!("Hey world");
 }
