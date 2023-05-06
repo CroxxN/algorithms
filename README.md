@@ -11,5 +11,8 @@
 
 ## Attempted Challenges
 
-- Code Forces
+- Code Forces (user: crox-x)
 - CSES
+- CodeChef
+- Leet Code
+- USACO
