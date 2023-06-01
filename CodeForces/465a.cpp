@@ -15,21 +15,17 @@ int main() {
   int n;
   string s;
   cin >> n >> s;
-  int count = 0;
   bitset<100> b(s);
-  bitset<100> one(b.to_ulong() + 1);
-  int c = 0;
-  while (b[c] == 0) {
-    c++;
-    if (c < 1) {
-      cout << 1;
-      return 0;
-    };
+  if (b.count() == n) {
+    cout << n;
+    return 0;
   }
-  for (int i = c; i < n; i++) {
-    count += b[i] | one[i];
+  int i = n-1;
+  int one = 0;
+  while (b[i] != 0 && i >=0 ) {
+    one++;
+    i--;
   }
-  cout << count ;
+  cout << (one+1);
   return 0;
 }
-
